@@ -16,14 +16,19 @@ class RootViewCtrl: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupTableView()
+        bindViewModel()
     }
     
     private func setupTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 
+    private func bindViewModel() {
+        // ViewModel 에서 선택된 ViewController 를 전달 받아 push 처리
+        viewModel.onTopicSelected = { [weak self] viewController in
+            self?.navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -43,9 +48,7 @@ extension RootViewCtrl: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension RootViewCtrl: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let selectedTopic = viewModel.selectTopic(at: indexPath.row) {
-            print("Selected topic: \(selectedTopic.title) - \(selectedTopic.description)")
-        }
+        viewModel.selectTopic(at: indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

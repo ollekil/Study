@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Swift Study View Ctrl-->
+        <scene sceneID="h97-Wj-jbv">
+            <objects>
+                <viewController storyboardIdentifier="SwiftStudyViewCtrl" id="0Kf-1i-BBG" customClass="SwiftStudyViewCtrl" customModule="BasicSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nrM-GP-Uv8" userLabel="MainView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wh1-AK-4qH">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB7-F8-gdU">
+                                        <rect key="frame" x="25" y="23" width="62" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="8Sa-QN-tSc"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="0Kf-1i-BBG" eventType="touchUpInside" id="ZGL-s8-osa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="hB7-F8-gdU" firstAttribute="leading" secondItem="wh1-AK-4qH" secondAttribute="leading" constant="25" id="Vt2-pA-6fm"/>
+                                    <constraint firstItem="hB7-F8-gdU" firstAttribute="top" secondItem="wh1-AK-4qH" secondAttribute="top" constant="23" id="oEJ-6T-o5N"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="L4s-HE-3sJ"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="L4s-HE-3sJ" firstAttribute="bottom" secondItem="wh1-AK-4qH" secondAttribute="bottom" id="DpA-kZ-k07"/>
+                            <constraint firstItem="wh1-AK-4qH" firstAttribute="top" secondItem="L4s-HE-3sJ" secondAttribute="top" id="dKN-Fb-rWE"/>
+                            <constraint firstItem="wh1-AK-4qH" firstAttribute="trailing" secondItem="L4s-HE-3sJ" secondAttribute="trailing" id="kaf-U3-QW9"/>
+                            <constraint firstItem="wh1-AK-4qH" firstAttribute="leading" secondItem="L4s-HE-3sJ" secondAttribute="leading" id="z4Z-jF-xde"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCC-rN-PPj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-324.4274809160305" y="-77.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
